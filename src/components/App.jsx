@@ -1,37 +1,42 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
+import CreateForm from './CreateForm'
 import Header from './Header'
 import Footer from './Footer'
 import Note from './Note'
-// import contacts from '../contacts'
-import Create from './CreateForm'
 
-
-function App() {
-
+function App(){
+    
     const [notes, setNotes] = useState([]);
-
-    function addNote(newNote) {
-        setNotes(prevNotes => {
-            return [...prevNotes, newNote];
-          });    }
-
-
-          
-    return  (<div>
-        <Header />
-        <Create onAdd={addNote} />
-        {notes.map((noteItem, index) => {
+    
+    function addnote(item){
+        // console.log(item);
+        setNotes(prevValue => {
+            return [...prevValue, item];
+        })
+    }
+    
+    function publish(item, index){
         return (
-          <Note
-            key={index}
-            id={index}
-            title={noteItem.title}
-            content={noteItem.content}
-          />
+            <Note id={index} key={index} onDel={deletenote} title={item.title} content={item.content}/>
         );
-      })}
+    }
+
+    function deletenote(id){
+        setNotes(prevNotes => {
+            return prevNotes.filter((noteItem, index) => {
+              return index !== id;
+            });
+          });
+    }
+    
+    return (
+        <div>
+        <Header />
+        <CreateForm onAdd={addnote} />
+        {notes.map(publish)}
         <Footer />
-  </div>)
-}
+        </div>
+    );
+} 
 
 export default App;

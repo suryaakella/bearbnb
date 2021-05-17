@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function CreateForm(){
+function CreateForm(props){
 
     const [note, setNote] = useState({title: "", content: ""})
 
@@ -16,7 +16,12 @@ function CreateForm(){
     }
 
     function handleSubmit(event){
-
+        props.onAdd(note);
+        setNote({
+          title: "",
+          content: ""
+        });
+        event.preventDefault();
     }
     
 
