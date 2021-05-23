@@ -1,3 +1,9 @@
+Deployed using Firebase at: https://bearbnb-be82d.web.app/
+1. Upload photos of the places you need to put on rent/sell.
+2. Set pricings, location and give details to get something as beautiful UI as this.
+![Screenshot from 2021-05-24 00-44-02](https://user-images.githubusercontent.com/47234885/119273692-b158cd00-bc29-11eb-947d-816d3989e68f.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
