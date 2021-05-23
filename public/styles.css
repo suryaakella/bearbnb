@@ -2,17 +2,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+
+
   }
   html {
     font-family: "Montserrat", sans-serif;
   }
   body {
+
     background: #eee;
     padding: 0 16px;
   }
   
   header {
-    background-color: #f5ba13;
+    background-color:lightblue;
+    font-size: 22px;
+    font-family: serif;
     margin: auto -16px;
     padding: 16px 32px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
@@ -23,13 +29,14 @@
     font-family: "McLaren", cursive;
     font-weight: 200;
   }
-  
+
+
   footer {
-    position: absolute;
     text-align: center;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
   }
   
   footer p {
@@ -55,3 +62,28 @@
     word-wrap: break-word;
   }
   
+  .form-button {
+    width: 25%;
+    height: auto;
+    background: whitesmoke;
+    color:black;
+  }
+
+  .form-button:hover, .form-title:hover, .form-textarea:hover{
+    background:#faf1e6;
+  }
+
+  .note-delete {
+    height:30px;
+    width: 30px;
+  }
+
+  .dustbin{
+    height:100%;
+    width: 100%;
+  }
+
+  .add-button{
+    height:100%;
+    width:100%;
+  }

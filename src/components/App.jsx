@@ -9,15 +9,16 @@ function App(){
     const [notes, setNotes] = useState([]);
     
     function addnote(item){
-        // console.log(item);
+        console.log(item);
         setNotes(prevValue => {
             return [...prevValue, item];
         })
     }
     
     function publish(item, index){
+        console.log(item)
         return (
-            <Note id={index} key={index} onDel={deletenote} title={item.title} content={item.content}/>
+            <Note id={index} key={index} onDel={deletenote} location={item.location} pricing={item.pricing} url={item.file} title={item.title} content={item.content}/>
         );
     }
 
